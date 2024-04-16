@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reastaurants",
+  "info": {
+    "singularName": "reastaurant",
+    "pluralName": "reastaurants",
+    "displayName": "Reastaurant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "reastaurants"
+    }
+  }
+}
